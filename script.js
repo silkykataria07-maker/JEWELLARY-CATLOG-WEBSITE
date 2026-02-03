@@ -1,19 +1,24 @@
-let total = 0;
+// Create an empty cart array
+let cart = [];
 
-function showCategory() {
-    document.getElementById("types").classList.remove("hidden");
+// Add item to cart
+function addToCart(productName) {
+    cart.push(productName);
+    alert(productName + " added to cart");
+
+    console.log("Cart Items:", cart);
 }
 
-function showProducts() {
-    document.getElementById("products").classList.remove("hidden");
-}
+// Remove item from cart
+function removeFromCart(productName) {
+    let index = cart.indexOf(productName);
 
-function addToCart(name, price) {
-    let list = document.getElementById("cart-items");
-    let li = document.createElement("li");
-    li.textContent = name + " - ₹" + price;
-    list.appendChild(li);
+    if (index > -1) {
+        cart.splice(index, 1);
+        alert(productName + " removed from cart");
+    } else {
+        alert(productName + " not found in cart");
+    }
 
-    total += price;
-    document.getElementById("total").textContent = total;
+    console.log("Cart Items:", cart);
 }
