@@ -1,60 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Jewellery Catalog</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="jewellery-layout">
 
-<header>
-    <h1>Elegant Jewellery</h1>
-    <p>Discover timeless beauty</p>
-</header>
+    <h2 class="layout-title">JEWELLERY</h2>
 
-<!-- METAL CATEGORIES -->
-<section class="menu">
-    <button onclick="showCategory('gold')">Gold</button>
-    <button onclick="showCategory('silver')">Silver</button>
-    <button onclick="showCategory('diamond')">Diamond</button>
-    <button onclick="showCategory('platinum')">Platinum</button>
-    <button onclick="showCategory('copper')">Copper</button>
-</section>
+    <div class="jewellery-grid">
 
-<!-- JEWELLERY TYPES -->
-<section id="types" class="menu hidden">
-    <button onclick="showProducts()">Rings</button>
-    <button>Earrings</button>
-    <button>Necklace</button>
-    <button>Bracelets</button>
-</section>
+        <div class="jewellery-card">
+            <img src="images/ring.webp" alt="Gold Ring">
+            <div class="jewellery-info">
+                <p class="product-name">Gold Ring</p>
+                <p class="product-price">₹25,000</p>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+        </div>
 
-<!-- PRODUCTS -->
-<section id="products" class="catalog hidden">
+        <div class="jewellery-card">
+            <img src="images/ring.webp" alt="Designer Ring">
+            <div class="jewellery-info">
+                <p class="product-name">Designer Ring</p>
+                <p class="product-price">₹30,000</p>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+        </div>
 
-    <div class="item">
-        <img src="images/ring.webp" alt="Ring">
-        <h3>Gold Ring</h3>
-        <p>₹25,000</p>
-        <button onclick="addToCart('Gold Ring', 25000)">Add to Cart</button>
+        <div class="jewellery-card">
+            <img src="images/earrings.jpg" alt="Earrings">
+            <div class="jewellery-info">
+                <p class="product-name">Elegant Earrings</p>
+                <p class="product-price">₹18,000</p>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+        </div>
+
     </div>
-
-    <div class="item">
-        <img src="images/ring.webp" alt="Ring">
-        <h3>Designer Ring</h3>
-        <p>₹30,000</p>
-        <button onclick="addToCart('Designer Ring', 30000)">Add to Cart</button>
-    </div>
-
 </section>
-
-<!-- CART -->
-<section class="cart">
-    <h2>🛒 Cart</h2>
-    <ul id="cart-items"></ul>
-    <h3>Total: ₹<span id="total">0</span></h3>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html>
